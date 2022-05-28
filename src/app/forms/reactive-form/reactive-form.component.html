@@ -1,0 +1,82 @@
+<div class="cont">
+  <form [formGroup]="form">
+    <div class="pgroup">
+      <label for="text"
+        >text
+        <span class="text-xs text-red-600" *ngIf="form.controls['text'].invalid"
+          >Campo obligatorio +5 caracteres</span
+        >
+      </label>
+      >> {{ form.value.text }}
+      <input type="text" name="text" formControlName="text" />
+    </div>
+    <div class="pgroup">
+      <label for="checkbox"><input type="checkbox" name="checkbox" formControlName="checkbox" /> checkbox</label> >> {{ form.value.checkbox }}<br />
+      
+    </div>
+    <div class="pgroup">
+      <label for="color">color</label> >> {{ form.value.color }}
+      <input type="color" name="color" formControlName="color" />
+    </div>
+    <div class="pgroup">
+      <label for="date">date</label> >> {{ form.value.date }}
+      <input type="date" name="date" formControlName="date" />
+    </div>
+    <div class="pgroup">
+      <label for="datetime">datetime</label> >> {{ form.value.datetime }}
+      <input type="datetime" name="datetime" formControlName="datetime" />
+    </div>
+    <div class="pgroup">
+      <label for="email"
+        >email
+        <span
+          class="text-xs text-red-600"
+          *ngIf="form.controls['email'].invalid"
+          >Email valido</span
+        >
+      </label>
+      >> {{ form.value.email }}
+      <input type="email" name="email" formControlName="email" />
+    </div>
+    <div class="pgroup">
+      <label for="file">file</label> >> {{ form.value.file }}
+      <input type="file" name="file" formControlName="file" />
+    </div>
+    <div class="pgroup">
+      <label for="image">image</label> >> {{ form.value.image }}
+      <input type="image" name="image" formControlName="image" />
+    </div>
+    <div class="pgroup">
+      <label for="month">month</label> >> {{ form.value.month }}
+      <input type="month" name="month" formControlName="month" />
+    </div>
+    <div class="pgroup">
+      <label for="number"
+        >number
+        <span
+          class="text-xs text-red-600"
+          *ngIf="form.controls['number'].invalid"
+          >Campo obligatorio</span
+        >
+      </label>
+      >> {{ form.value.number }}
+      <input type="number" name="number" formControlName="number" />
+    </div>
+    <div class="pgroup">
+      <label for="password">password</label> >> {{ form.value.password }}
+      <input type="password" name="password" formControlName="password" />
+    </div>
+    <div class="pgroup">
+      <label for="time">time</label> >> {{ form.value.time }}
+      <input type="time" name="time" formControlName="time" />
+    </div>
+    <div class="pgroup">
+      <label for="week">week</label> >> {{ form.value.week }}
+      <input type="week" name="week" formControlName="week" />
+    </div>
+    <div class="pgroup">
+      <label for="search">search</label> >> {{ form.value.search }}
+      <input type="search" name="search" formControlName="search" />
+    </div>
+  </form>
+</div>
