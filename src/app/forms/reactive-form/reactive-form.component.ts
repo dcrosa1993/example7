@@ -9,13 +9,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ReactiveFormComponent implements OnInit {
 
   form:FormGroup;
+  checked = false;
+  indeterminate = false;
+  labelPosition: 'before' | 'after' = 'after';
+  disabled = false;
 
   constructor() { }
   
   ngOnInit(): void {
     this.form = new FormGroup({
       text: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      checkbox: new FormControl(''),
+      checkbox: new FormControl(true),
       color: new FormControl(''),
       date: new FormControl(''),
       datetime: new FormControl(''),

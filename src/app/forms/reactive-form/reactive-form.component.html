@@ -1,18 +1,20 @@
 <div class="cont">
   <form [formGroup]="form">
     <div class="pgroup">
-      <label for="text"
-        >text
-        <span class="text-xs text-red-600" *ngIf="form.controls['text'].invalid"
-          >Campo obligatorio +5 caracteres</span
-        >
-      </label>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Text</mat-label>
+        <input type="text" matInput formControlName="text" placeholder="Ex. any">
+        <mat-error *ngIf="form.controls['text'].invalid">
+          El texto no es valido
+        </mat-error>
+      </mat-form-field>
       >> {{ form.value.text }}
-      <input type="text" name="text" formControlName="text" />
     </div>
     <div class="pgroup">
-      <label for="checkbox"><input type="checkbox" name="checkbox" formControlName="checkbox" /> checkbox</label> >> {{ form.value.checkbox }}<br />
-      
+      <mat-checkbox class="example-margin" formControlName="checkbox" [(indeterminate)]="indeterminate" [labelPosition]="labelPosition" [disabled]="disabled">
+        I'm a checkbox
+      </mat-checkbox>
+      {{ form.value.checkbox }}
     </div>
     <div class="pgroup">
       <label for="color">color</label> >> {{ form.value.color }}

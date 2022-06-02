@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormRoutingModule } from './reactive-form-routing.module';
 import { ReactiveFormComponent } from './reactive-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormMaterialModule } from './reactive-form-material.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormRoutingModule,
+    ReactiveFormMaterialModule,
     FormsModule,
     ReactiveFormsModule
   ]
