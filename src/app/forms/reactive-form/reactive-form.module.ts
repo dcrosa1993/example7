@@ -5,6 +5,7 @@ import { ReactiveFormRoutingModule } from './reactive-form-routing.module';
 import { ReactiveFormComponent } from './reactive-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormMaterialModule } from './reactive-form-material.module';
+import { PetitionCardModule } from './petition-card/petition-card.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReactiveFormMaterialModule } from './reactive-form-material.module';
     ReactiveFormRoutingModule,
     ReactiveFormMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PetitionCardModule
   ]
 })
 export class ReactiveFormModule { }

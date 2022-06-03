@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -9,11 +11,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   imports: [
     CommonModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatButtonModule,
+    MatCardModule,
   ],
   exports:[
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatButtonModule,
+    MatCardModule,
   ]
 })
 export class ReactiveFormMaterialModule { }

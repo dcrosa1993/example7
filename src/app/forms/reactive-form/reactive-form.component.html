@@ -1,84 +1,24 @@
-<div class="cont">
-  <form [formGroup]="form">
-    <div class="pgroup">
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Text</mat-label>
-        <input type="text" matInput formControlName="text" placeholder="Ex. any">
-        <mat-error *ngIf="form.controls['text'].invalid">
-          El texto no es valido
-        </mat-error>
-      </mat-form-field>
-      >> {{ form.value.text }}
+<div class="header">
+  <h3 class="logo">MapLight</h3>
+</div>
+<div class="cont-flex">
+  <!--Container de la pagina-->
+  <div class="aux1">
+    <p class="text-blue-700 mr-3">Enter Code</p>
+    <p class="text-gray-600 mr-3">Returning User?</p>
+  </div>
+  <div class="aux2">
+    <div class="petition_list">
+      <h1 class="items-start">Sing A Petition</h1>
+      <div class="button_cont">
+        <button mat-stroked-button color="primary">All Types</button>
+        <button mat-stroked-button>Some</button>
+        <button mat-stroked-button>Candidate</button>
+      </div>
+      <div class="petition_cont">
+        <app-petition-card></app-petition-card>
+        <app-petition-card></app-petition-card>
+      </div>
     </div>
-    <div class="pgroup">
-      <mat-checkbox class="example-margin" formControlName="checkbox" [(indeterminate)]="indeterminate" [labelPosition]="labelPosition" [disabled]="disabled">
-        I'm a checkbox
-      </mat-checkbox>
-      {{ form.value.checkbox }}
-    </div>
-    <div class="pgroup">
-      <label for="color">color</label> >> {{ form.value.color }}
-      <input type="color" name="color" formControlName="color" />
-    </div>
-    <div class="pgroup">
-      <label for="date">date</label> >> {{ form.value.date }}
-      <input type="date" name="date" formControlName="date" />
-    </div>
-    <div class="pgroup">
-      <label for="datetime">datetime</label> >> {{ form.value.datetime }}
-      <input type="datetime" name="datetime" formControlName="datetime" />
-    </div>
-    <div class="pgroup">
-      <label for="email"
-        >email
-        <span
-          class="text-xs text-red-600"
-          *ngIf="form.controls['email'].invalid"
-          >Email valido</span
-        >
-      </label>
-      >> {{ form.value.email }}
-      <input type="email" name="email" formControlName="email" />
-    </div>
-    <div class="pgroup">
-      <label for="file">file</label> >> {{ form.value.file }}
-      <input type="file" name="file" formControlName="file" />
-    </div>
-    <div class="pgroup">
-      <label for="image">image</label> >> {{ form.value.image }}
-      <input type="image" name="image" formControlName="image" />
-    </div>
-    <div class="pgroup">
-      <label for="month">month</label> >> {{ form.value.month }}
-      <input type="month" name="month" formControlName="month" />
-    </div>
-    <div class="pgroup">
-      <label for="number"
-        >number
-        <span
-          class="text-xs text-red-600"
-          *ngIf="form.controls['number'].invalid"
-          >Campo obligatorio</span
-        >
-      </label>
-      >> {{ form.value.number }}
-      <input type="number" name="number" formControlName="number" />
-    </div>
-    <div class="pgroup">
-      <label for="password">password</label> >> {{ form.value.password }}
-      <input type="password" name="password" formControlName="password" />
-    </div>
-    <div class="pgroup">
-      <label for="time">time</label> >> {{ form.value.time }}
-      <input type="time" name="time" formControlName="time" />
-    </div>
-    <div class="pgroup">
-      <label for="week">week</label> >> {{ form.value.week }}
-      <input type="week" name="week" formControlName="week" />
-    </div>
-    <div class="pgroup">
-      <label for="search">search</label> >> {{ form.value.search }}
-      <input type="search" name="search" formControlName="search" />
-    </div>
-  </form>
+  </div>
 </div>

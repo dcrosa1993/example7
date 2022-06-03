@@ -1,0 +1,13 @@
+.petition{
+    @apply rounded-xl bg-gray-50 p-2 mb-4 shadow-md;
+  }
+  
+  mat-progress-bar{
+    @apply rounded-full h-2;
+  }
+  
+  .endorse{
+    @apply w-full;
+  }
+
+  
